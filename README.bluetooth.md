@@ -1,10 +1,10 @@
 #RDK X5 连接蓝牙音箱
 ##bluetoothctl默认镜像已经包含了的，可以直接进行蓝牙配对连接
-#$bluetoothctl 进入蓝牙控制台
-##  [bluetooth]# scan on
-##  [bluetooth]# pair <音箱MAC>
-##  [bluetooth]# trust <音箱MAC>
-##  [bluetooth]# connect <音箱MAC>
+#'$bluetoothctl'进入蓝牙控制台
+  '''[bluetooth]# scan on
+  [bluetooth]# pair <音箱MAC>
+  [bluetooth]# trust <音箱MAC>
+  [bluetooth]# connect <音箱MAC>'''
 #搜索蓝牙设备，找到MAC地址后进行配对并信任该设备，最后连接。
 ##$bluetoothctl info <音箱MAC> 可以查看蓝牙音箱状态
 
