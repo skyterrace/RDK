@@ -183,12 +183,15 @@ def main():
     motor.enable_motor()
     try:
         while True:
+            iter_start = time.monotonic()
             # 控制
             motor.send_speed(
                 args.speed
             )
             #读取
             state=motor.read_feedback()
+            elapsed = time.monotonic() - iter_start
+            print(elapsed)
             for k,v in state.items():
                 print(f"{k:>15}:{v}")
             time.sleep(
